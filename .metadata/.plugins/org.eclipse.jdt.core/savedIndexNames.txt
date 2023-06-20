@@ -1,0 +1,3 @@
+INDEX VERSION 1.132+C:\Micole\degree Sem 3\DAD\lab\Materials for Lab Exercises for Week 14-20230620\.metadata\.plugins\org.eclipse.jdt.core
+514120870.index
+1865797976.index
