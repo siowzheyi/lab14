@@ -69,7 +69,15 @@ public class UDPServerSideApp {
 	            
 	            // More processing
 	            int totalCharacters =  processor.countCharacters();
-	            byte[] outData = processor.convertToByteArray(totalCharacters);
+	            int totalVowel =  processor.countVowel();
+	            int totalConsonant =  processor.countConsonant();
+	            int totalPunctuation =  processor.countPunctuation();
+	            
+	            String result = "Total characters: " + totalCharacters + "\nTotal vowel: " + totalVowel +
+	            		"\nTotal consonant: " + totalConsonant + "\nTotal punctuation: " + totalPunctuation;
+
+//	            byte[] outData = processor.convertToByteArray(totalCharacters);
+	            byte[] outData = result.getBytes();
 	            
 	            // 7. Get the client information
 	            InetAddress clientAddress =  receivedPacket.getAddress();
@@ -82,8 +90,8 @@ public class UDPServerSideApp {
 	            
 	            // 9. Reply to client
 	            datagramSocket.send(outPacket);
-	            System.out.println("Message sent (totalCharacters) : " 
-	            		+ totalCharacters  + ".\n");
+	            System.out.println("Message sent to client : \n" 
+	            		+ result  + ".\n");
 	            
         	}
 				

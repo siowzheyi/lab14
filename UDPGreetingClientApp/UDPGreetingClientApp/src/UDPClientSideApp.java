@@ -28,7 +28,7 @@ public class UDPClientSideApp {
 			InetAddress ip = InetAddress.getLocalHost();
 			
 			// 2. Prepare and transform data into bytes
-			String text = "Good morning Malaysia Singapore Vietnam";
+			String text = "Good morning Malaysia, Singapore, Vietnam";
 			byte buf[] = text.getBytes();
 
 			// 3. Wrap data in datagram packet (constructor no 5)
@@ -57,10 +57,10 @@ public class UDPClientSideApp {
 			
 			// 10. Further processing
 			// Transform data into human readable text
-			String length = new String(inData, 0, inPacket.getLength());
+			String message = new String(inData, 0, inPacket.getLength());
 			
 			// Display the data received from the server
-			System.out.println("\tLength from the server is : " + length);
+			System.out.println("\tMessage from the server is : " + message);
 			
 			
 			datagramSocket.close();
