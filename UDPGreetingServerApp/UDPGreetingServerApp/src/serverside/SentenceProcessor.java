@@ -94,22 +94,6 @@ public class SentenceProcessor {
 	}
 
 
-//	 /**
-//	 * This method count number of punctuation
-//	 * @author Siow Zhe Yi
-//	 * @return
-//	 */
-//	public int countPunctuation() {
-//		int punctuation = 0;
-//		Pattern pattern = Pattern.compile("\\p{Punct}");
-//		Matcher matcher = pattern.matcher(sentence);
-//
-//		while (matcher.find()) {
-//			punctuation++;
-//		}
-//		return punctuation;
-//	}
-//	
 	 /**
 	 * This method count number of punctuation
 	 * @author Siow Zhe Yi
